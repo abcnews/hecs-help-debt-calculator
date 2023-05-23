@@ -1,36 +1,36 @@
 {
-  "name": "hecs-help-debt-calculator",
-  "version": "0.0.0",
-  "description": "A project generated from aunty's preact project template.",
-  "license": "MIT",
-  "private": true,
-  "contributors": [
-    "Andrew Kesper <kesper.andrew@abc.net.au>"
-  ],
-  "aunty": {
-    "type": "preact"
-  },
-  "scripts": {
-    "start": "aunty serve",
-    "test": "aunty test"
-  },
-  "abc": {
-    "css": {
-      "libraryDir": "./node_modules/@abcaustralia/nucleus/css",
-      "logVariables": "false"
-    }
-  },
-  "devDependencies": {
-    "@abcnews/aunty": "^12.0.3",
-    "@types/jest": "^29.5.1",
-    "@types/webpack-env": "^1.18.0",
-    "html-looks-like": "^1.0.3",
-    "preact-render-to-string": "^6.0.3"
-  },
-  "dependencies": {
-    "@abcnews/alternating-case-to-object": "^3.1.0",
-    "@abcnews/env-utils": "^3.1.0",
-    "@abcnews/mount-utils": "^2.0.0",
-    "preact": "^10.14.1"
-  }
+	"name": "hecs-help-debt-calculator",
+	"version": "0.1.0",
+	"description": "A project generated from aunty's preact project template.",
+	"license": "MIT",
+	"private": true,
+	"contributors": [
+		"Andrew Kesper <kesper.andrew@abc.net.au>"
+	],
+	"aunty": {
+		"type": "preact"
+	},
+	"scripts": {
+		"start": "aunty serve",
+		"test": "aunty test"
+	},
+	"abc": {
+		"css": {
+			"libraryDir": "./node_modules/@abcaustralia/nucleus/css",
+			"logVariables": "false"
+		}
+	},
+	"devDependencies": {
+		"@abcnews/aunty": "^12.0.3",
+		"@types/jest": "^29.5.1",
+		"@types/webpack-env": "^1.18.0",
+		"html-looks-like": "^1.0.3",
+		"preact-render-to-string": "^6.0.3"
+	},
+	"dependencies": {
+		"@abcnews/alternating-case-to-object": "^3.1.0",
+		"@abcnews/env-utils": "^3.1.0",
+		"@abcnews/mount-utils": "^2.0.0",
+		"preact": "^10.14.1"
+	}
 }
