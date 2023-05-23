@@ -156,7 +156,7 @@ const App: FunctionalComponent<AppProps> = (props) => {
     <div className={styles['hecs-help-debt-calculator']} data-theme={isDarkTheme ? 'dark' : 'light'} ref={containerRef}>
       <header>
         <div class="illustration" role="presentation">
-          <video ref={videoElement} width="100" height="100" autoplay playsInline muted poster="https://www.abc.net.au/res/sites/news-projects/hecs-help-debt-calculator/animation/graduation-cap.png">
+          <video ref={videoElement} width="100" height="100" autoplay playsInline muted poster="https://www.abc.net.au/res/sites/news-projects/hecs-help-debt-calculator/animation/graduation-cap.png" title='Credit: "Graduation-cap" by The Noto Project Authors is licensed under CC BY 4.0'>
             <source src="https://www.abc.net.au/res/sites/news-projects/hecs-help-debt-calculator/animation/graduation-cap.webm" codecs="video/webm; codecs=vp9" />
             <source src="https://www.abc.net.au/res/sites/news-projects/hecs-help-debt-calculator/animation/graduation-cap.mp4" codecs="video/mp4; codecs=hvc" />
           </video>
