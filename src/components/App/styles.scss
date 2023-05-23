@@ -1,0 +1,187 @@
+@mixin desktop {
+	@media screen and (min-width: 500px) {
+		@content;
+	}
+}
+
+$sans-serif: 'ABCSans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', 'Helvetica', 'Arial Nova', 'Arial', sans-serif;
+$serif: 'ABCSerif', 'Cambria', serif;
+
+$color-lightblue: #00cfff;
+
+$url-fonts-root: 'https://www.abc.net.au/res/fonts/';
+$url-font-sans: '#{$url-fonts-root}abcsans/abcsans';
+$url-font-serif: '#{$url-fonts-root}abcserif/abcserif';
+
+@font-face {
+  font-family: 'ABCSans';
+  font-weight: normal;
+  font-style: normal;
+  src: url('#{$url-font-sans}-regular.woff2') format('woff2'), url('#{$url-font-sans}-regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'ABCSans';
+  font-weight: normal;
+  font-style: italic;
+  src: url('#{$url-font-sans}-regularitalic.woff2') format('woff2'),
+    url('#{$url-font-sans}-regularitalic.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'ABCSans';
+  font-weight: bold;
+  font-style: normal;
+  src: url('#{$url-font-sans}-bold.woff2') format('woff2'), url('#{$url-font-sans}-bold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'ABCSerif';
+  font-weight: normal;
+  font-style: normal;
+  src: url('#{$url-font-serif}-regular.woff2') format('woff2'), url('#{$url-font-serif}-regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'ABCSerif';
+  font-weight: normal;
+  font-style: italic;
+  src: url('#{$url-font-serif}-regular_italic.woff2') format('woff2'),
+    url('#{$url-font-serif}-regular_italic.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'ABCSerif';
+  font-weight: bold;
+  font-style: normal;
+  src: url('#{$url-font-serif}-bold.woff2') format('woff2'), url('#{$url-font-serif}-bold.woff') format('woff');
+}
+
+body[data-theme="dark"] {
+  background-color: #000;
+}
+
+.hecs-help-debt-calculator {
+  --background: #fff;
+  --text: #000;
+  text-align: center;
+  border: 1px solid $color-lightblue;
+  border-radius: 0.25rem;
+  background-color: var(--background, #fff);
+  color: var(--text, #000);
+  text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  &[data-theme="dark"] {
+    --background: #000;
+    --text: #fff;
+  }
+  * {
+    font-family: $sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    // THIN SCROLLBARS
+    // Firefox
+    scrollbar-width: thin;
+    scrollbar-color: rgba(#808080, 0.25) transparent;
+    // Chrome/Safari/Edge
+    &::-webkit-scrollbar {
+      width: 0.25rem;
+      height: 0.25rem;
+    }
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: rgba(#808080, 0.25);
+    }
+  }
+  header, main, footer {
+    padding: 1rem 1.5rem;
+  }
+  h2 {
+    font-size: 160%;
+    line-height: 1.2;
+    @include desktop {
+      font-size: 180%;
+    }
+    span {
+      display: inline-block;
+    }
+  }
+  p + p {
+    margin-top: 1rem;
+  }
+  header {
+    padding-bottom: 0.5rem;
+  }
+  main {
+    padding-top: 0.5rem;
+    font-size: 16px;
+    @include desktop {
+      font-size: 18px;
+    }
+  }
+  main p {
+    line-height: 2;
+  }
+  footer {
+    background-color: rgba($color-lightblue, 0.1);
+    span {
+      display: inline-block;
+    }
+    :global(.output) {
+      line-height: 1.2;
+      font-size: 125%;
+      @include desktop {
+        font-size: 150%;
+      }
+    }
+    :global(.fineprint) {
+      opacity: 0.66;
+      font-size: 10px;
+      @include desktop {
+        font-size: 12px;
+      }
+    }
+  }
+  &[data-theme="dark"] footer {
+    background-color: rgba($color-lightblue, 0.25);
+  }
+  :global(.debt) {
+    label {
+      display: block;
+    }
+    span {
+      position: relative;
+      label {
+        position: absolute;
+        top: 0;
+        transform: translateY(calc(-1 * 1.25em * 0.5 + 2px));
+        left: 0;
+        width: calc(1em + 2px);
+        text-align: center;
+        display: block;
+        z-index: 2;
+        font-size: 1.25em;
+      }
+      input {
+        font-size: 1.25em;
+        padding: 2px 2px 2px calc(1.25em + 2px);
+        width: 7em;
+        background: rgba(#ccc, 0.33);
+        border: 1px solid transparent;
+        border-bottom: 2px solid $color-lightblue;
+        border-radius: 0.25rem;
+        text-align: center;
+        color: currentColor;
+        &:focus {
+          border-color: $color-lightblue;
+          outline: none;
+        }
+      }
+    }
+  }
+}
+
+
